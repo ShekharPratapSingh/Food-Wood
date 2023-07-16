@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Shimmer_card.css"
 
-function Shimmer_card() {
+function ShimmerCard() {
   return (
     <div>
       <div class="card">
@@ -21,4 +21,4 @@ function Shimmer_card() {
   )
 }
 
-export default Shimmer_card
+export default ShimmerCard

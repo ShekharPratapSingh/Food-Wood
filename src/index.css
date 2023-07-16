@@ -1,6 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
-.body_container{
+.main_app{
     background-color: #101426;
 }
 .body_container h3{
