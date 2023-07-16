@@ -1,2 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
+.body_container{
+    background-color: #101426;
+}
+.body_container h3{
+    color: white;
+}
