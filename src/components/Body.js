@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import { NavLink } from "react-router-dom";
+import useNetconnection from "./utils/useNetconnection";
+
 
 function Body() {
   let resData = [];
@@ -48,7 +51,9 @@ function Body() {
     setFilterdata(filteredData)
   }
 
+const status=useNetconnection()
 
+if(status===false) return <h1 className="d-flex justify-content-center align-items-center">Please check your Internet</h1>
 
 
   return respData.length === 0 ? (
@@ -57,7 +62,7 @@ function Body() {
     <div className="container-fluid body_container">
       <div className="row">
         <div className="col-md-12 my-3">
-          <h3>Search</h3>
+          <h4 className="text-dark" >Search Restaurant</h4>
         </div>
         <div className="col-md-12">
           <div>
@@ -87,11 +92,14 @@ function Body() {
           {filterData.map((result, index) => {
             console.log(result.data.cloudinaryImageId);
             return (
-              <RestaurantCard
+     
+             <RestaurantCard
+                resLink={result.data.id}
                 imgsrc={result.data.cloudinaryImageId}
                 response={result}
                 key={result.data.id}
               />
+           
             );
           })}
         </div>

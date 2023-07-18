@@ -1,8 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
-.main_app{
-    background-color: #101426;
-}
-.body_container h3{
+/* .main_app{
+    background-color: whitesmoke;
+} */
+.body_container h4{
     color: white;
 }
